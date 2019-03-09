@@ -22,7 +22,6 @@ const AuthorizeUrl = Auth.getOauth2Client().generateAuthUrl({
 App.set('trust proxy', 1);
 
 if (process.env.PROD === "true") {
-  console.log("Using Helmet");
   App.use(Helmet());
 }
 
