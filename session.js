@@ -3,8 +3,6 @@
 const ExpressSession = require('express-session');
 const RedisStore = require('connect-redis')(ExpressSession);
 
-console.log(process.env);
-
 const Session = ExpressSession({
     store: new RedisStore({
         'host': process.env.REDIS_HOST,
