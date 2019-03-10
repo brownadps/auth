@@ -11,7 +11,11 @@ const { Session } = require('./session.js');
 const App = Express();
 const Router = Express.Router();
 const PORT = 8080;
-const SCOPES = ['openid profile email', 'https://www.googleapis.com/auth/gmail.send'];
+const SCOPES = [
+    'openid profile email',
+    'https://www.googleapis.com/auth/gmail.send'
+    'https://www.googleapis.com/auth/calendar.events'
+];
 
 const AuthorizeUrl = Auth.getOauth2Client().generateAuthUrl({
     access_type: 'offline',
